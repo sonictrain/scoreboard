@@ -9,40 +9,48 @@
     <body>
         <div id="master-container">
             <header>
-                <h1>MATCH SCOREBOARD</h1>
+                <h1>🏐 MATCH SCOREBOARD 🏀</h1>
             </header>
 
             <main>
-                <div class="score-container">
-                    <div class="team">
-                        <h3 class="team-name">HOME</h3>
+                <div id="container">
+                    <div class="score-container">
+                        <div class="team">
+                            <h3 class="team-name">HOME</h3>
+                        </div>
+                        <div class="score">
+                            <h3 id="home-pt">0</h3>
+                        </div>
+                        <div class="button-container">
+                            <button onclick="add1()">+1</button><!--
+                            --><button onclick="add2()">+2</button><!--
+                            --><button onclick="add3()">+3</button>
+                        </div>
                     </div>
-                    <div class="score">
-                        <h3 id="home-pt">0</h3>
-                    </div>
-                    <div class="btn-pt">
-                        <button onclick="add1()">+1</button><!--
-                        --><button onclick="add2()">+2</button><!--
-                        --><button onclick="add3()">+3</button>
+                    <div class="score-container">
+                        <div class="team">
+                            <h3 class="team-name">GUEST</h3>
+                        </div>
+                        <div class="score">
+                            <h3 id="guest-pt">0</h3>
+                        </div>
+                        <div class="button-container">
+                            <button onclick="add1()">+1</button><!--
+                            --><button onclick="add2()">+2</button><!--
+                            --><button onclick="add3()">+3</button>
+                        </div>
                     </div>
                 </div>
-                <div class="score-container">
-                    <div class="team">
-                        <h3 class="team-name">GUEST</h3>
-                    </div>
-                    <div class="score">
-                        <h3 id="guest-pt">0</h3>
-                    </div>
-                    <div class="btn-pt">
-                        <button onclick="add1()">+1</button><!--
-                        --><button onclick="add2()">+2</button><!--
-                        --><button onclick="add3()">+3</button>
-                    </div>
+                <hr class="separator">
+                <div id="container">
+                
+                    <button>NEW SET</button>
+                    <button>NEW GAME</button>
                 </div>
             </main>
 
             <section>
-                <p>NOTE</p>
+                <p>LOG</p>
             </section>
 
             <footer>

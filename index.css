@@ -17,10 +17,10 @@ p {
 body,html {
     margin: 0;
     padding: 0;
-    transition: all 200ms;
 }
 
 * {
+    transition: all 400ms;
     box-sizing: border-box;
 }
 
@@ -38,7 +38,8 @@ body {
     display: flex;
     padding: 1rem;
     flex-direction: column;
-    justify-content: center;
+    justify-content: start;
+    /* align-items: start; */
     height: 100vh;
 }
 
@@ -48,32 +49,42 @@ header {
     align-items: center;
     height: 10%;
     margin-bottom: 1rem;
+    font-size: 1rem;
 }
 
 main {
-    display: flex;
-    height: 50%;
+    height: fit-content;
     background-color: #232232;
     border-radius: 1rem;
     margin-bottom: 1rem;
+    padding: 1rem;
+}
+
+#container {
+    display: flex;
+    justify-content: center;
+    background-color: #1619269d;
+    border-radius: 0.5rem;
+}
+
+.team-name {
+    font-size: 1.75rem;
 }
 
 .score-container {
-    /* padding: 1rem; */
-    width: 50%;
+    padding: 1rem 0;
+    width:45%;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
 .score-container:nth-child(1) {
-    margin-left: 1rem;
-    margin-right: 0.5rem;
+    margin-right: 0.25rem;
 }
 
 .score-container:nth-child(2) {
-    margin-left: 0.5rem;
-    margin-right: 1rem;
+    margin-left: 0.25rem;
 }
 
 .score {
@@ -81,58 +92,93 @@ main {
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 50%;
+    max-width: 300px;
+    padding: 2rem 0;
     background-color: #080001;
+    border-radius: 0.5rem;
     font-family: "alarm_clock";
     font-size: 5rem;
     color: #F94F6D;
 }
 
-.btn-pt {
+.button-container {
     display: flex;
     justify-content: space-between;
     width: 100%;
-    padding: 0.5rem;
+    max-width: 200px;
+    padding: 0.75rem;
 }
 
 button {
-    background-color: transparent;
-    border-radius: 0.5rem;
-    border-width: 0.15rem;
-    border-color: rgb(207, 207, 207);
-    border-style: solid;
-    color: rgb(207, 207, 207);
-    cursor: pointer;
-    display: inline-block;
-    font-family: "alarm_clock";
-    font-size: 1rem;
-    list-style: none;
-    margin: 0;
-    padding: 10px 12px;
-    text-align: center;
-    transition: all 200ms;
-    vertical-align: baseline;
-    white-space: nowrap;
-    user-select: none;
-    -webkit-user-select: none;
-    touch-action: manipulation;
+  align-items: center;
+  appearance: none;
+  background-color: #FCFCFD;
+  border-radius: 0.25rem;
+  border-width: 0;
+  box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,rgba(45, 35, 66, 0.3) 0 7px 13px -3px,#D6D6E7 0 -3px 0 inset;
+  box-sizing: border-box;
+  color: #080001;
+  cursor: pointer;
+  font-family: "alarm_clock";
+  justify-content: center;
+  list-style: none;
+  overflow: hidden;
+  text-decoration: none;
+  transition: box-shadow .15s,transform .15s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  will-change: box-shadow,transform;
+  font-size: 1rem;
+  width: 100%;
+  margin: 0 0.15rem;
+  padding: 0.25rem 0.25rem;
+}
+
+button:focus {
+  box-shadow: #D6D6E7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+}
+
+button:hover {
+  box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+  transform: translateY(-2px);
+}
+
+button:active {
+  box-shadow: #D6D6E7 0 3px 7px inset;
+  transform: translateY(2px);
+}
+
+.separator {
+    color: #161926;
+    display: block;
+    margin-top: 0.75em;
+    margin-bottom: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: inset;
+    border-width: 1px;
 }
 
 section {
     background-color: #232232;
     border-radius: 1rem;
-    height: 30%;
+    height: auto;
     display: flex;
     justify-content: center;
     align-items: center;
     margin-bottom: 1rem;
+    padding: 1rem;
 }
 
 footer {
+    background-color: #232232;
+    border-radius: 1rem;
     height: 10%;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 0;
-    margin: 0;
+    margin-top: auto;
 }
