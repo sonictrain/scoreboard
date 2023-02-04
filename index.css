@@ -17,6 +17,7 @@ p {
 body,html {
     margin: 0;
     padding: 0;
+    transition: all 200ms;
 }
 
 * {
@@ -58,16 +59,29 @@ main {
 }
 
 .score-container {
+    /* padding: 1rem; */
     width: 50%;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
+.score-container:nth-child(1) {
+    margin-left: 1rem;
+    margin-right: 0.5rem;
+}
+
+.score-container:nth-child(2) {
+    margin-left: 0.5rem;
+    margin-right: 1rem;
+}
+
 .score {
     display: flex;
     justify-content: center;
-    width: 60%;
+    align-items: center;
+    width: 100%;
+    height: 50%;
     background-color: #080001;
     font-family: "alarm_clock";
     font-size: 5rem;
@@ -76,12 +90,32 @@ main {
 
 .btn-pt {
     display: flex;
-    width: 60%;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0.5rem;
 }
 
 button {
-    flex: auto;
-    font-size: 1.25rem;
+    background-color: transparent;
+    border-radius: 0.5rem;
+    border-width: 0.15rem;
+    border-color: rgb(207, 207, 207);
+    border-style: solid;
+    color: rgb(207, 207, 207);
+    cursor: pointer;
+    display: inline-block;
+    font-family: "alarm_clock";
+    font-size: 1rem;
+    list-style: none;
+    margin: 0;
+    padding: 10px 12px;
+    text-align: center;
+    transition: all 200ms;
+    vertical-align: baseline;
+    white-space: nowrap;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
 }
 
 section {
