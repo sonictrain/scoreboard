@@ -7,12 +7,20 @@
         url("./assets/fonts/alarm_clock.woff") format('woff');
 }
 
-body,
 h1,
 h2,
 h3,
 p {
     margin: 0;
+}
+
+body,html {
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    box-sizing: border-box;
 }
 
 body {
@@ -24,7 +32,6 @@ body {
 
 #master-container {
     margin: 0 auto;
-    padding: 1rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -47,6 +54,8 @@ main {
     /* border: 4px solid #36a03b; */
     height: 50%;
     background-color: aquamarine;
+    padding: 0;
+    margin: 0;
 }
 
 .score-container {
@@ -79,6 +88,8 @@ button {
 section {
     background-color: bisque;
     height: 30%;
+    padding: 0;
+    margin: 0;
 }
 
 footer {
@@ -87,4 +98,6 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 0;
+    margin: 0;
 }
