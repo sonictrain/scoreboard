@@ -21,10 +21,10 @@
                         <div class="score">
                             <h3 id="home-pt">0</h3>
                         </div>
-                        <div class="button-container">
-                            <button onclick="add1()">+1</button><!--
-                            --><button onclick="add2()">+2</button><!--
-                            --><button onclick="add3()">+3</button>
+                        <div class="home-button-container">
+                            <button class="1" onclick="addPoints()">+1</button><!--
+                            --><button class="2" onclick="addPoints()">+2</button><!--
+                            --><button class="3" onclick="addPoints()">+3</button>
                         </div>
                     </div>
                     <div class="score-container">
@@ -34,18 +34,17 @@
                         <div class="score">
                             <h3 id="guest-pt">0</h3>
                         </div>
-                        <div class="button-container">
-                            <button onclick="add1()">+1</button><!--
-                            --><button onclick="add2()">+2</button><!--
-                            --><button onclick="add3()">+3</button>
+                        <div class="guest-button-container">
+                            <button class="1" onclick="addPoints()">+1</button><!--
+                            --><button class="2" onclick="addPoints()">+2</button><!--
+                            --><button class="3" onclick="addPoints()">+3</button>
                         </div>
                     </div>
                 </div>
                 <hr class="separator">
                 <div id="container">
-                
-                    <button>NEW SET</button>
-                    <button>NEW GAME</button>
+                    <button onclick="newSet()">NEW SET</button>
+                    <button onclick="newMatch()">NEW GAME</button>
                 </div>
             </main>
 
