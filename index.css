@@ -67,6 +67,14 @@ main {
     border-radius: 0.5rem;
 }
 
+.team {
+    display: flex;
+}
+
+.team > span {
+    padding: 0.25rem 0 0 0.5rem;
+}
+
 .team-name {
     font-size: 1.5rem;
     margin-bottom: 0.75rem;
