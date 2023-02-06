@@ -1,6 +1,6 @@
 let homePt = 0
 let guestPt = 0
-let parent = ""
+let setNumber = 1
 
 document.getElementById("guest-pt").textContent = guestPt
 
@@ -20,12 +20,19 @@ function addPoints() {
     }
 }
 
-function newSet() {
-    document.getElementById("home-pt").textContent = 0
-    document.getElementById("guest-pt").textContent = 0
+function resetPoints() {
+    homePt = 0
+    guestPt = 0
+    document.getElementById("home-pt").textContent = homePt
+    document.getElementById("guest-pt").textContent = guestPt
 }
 
-function newMatch() {
-    document.getElementById("home-pt").textContent = 0
-    document.getElementById("guest-pt").textContent = 0
+function newSet() {
+    resetPoints()
+    //addset2logs(setNumber, homePt, guestPt)
+}
+
+function newGame() {
+    resetPoints()
+    //addGame2logs(homePt, guestPt)
 }
