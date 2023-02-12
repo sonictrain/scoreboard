@@ -1,6 +1,8 @@
 let homePt = 0
 let guestPt = 0
-let setNumber = 1
+let set = 1
+let log = ""
+let spacer = "<br>"
 
 document.getElementById("guest-pt").textContent = guestPt
 
@@ -28,11 +30,25 @@ function resetPoints() {
 }
 
 function newSet() {
+    addset2logs()
     resetPoints()
-    //addset2logs(setNumber, homePt, guestPt)
+    set ++
 }
 
 function newGame() {
+    addgame2logs()
     resetPoints()
-    //addGame2logs(homePt, guestPt)
+    set ++
+}
+
+function addset2logs() {
+    log = "#" + set + ": " + homePt + " - " + guestPt + "<br>"
+    document.getElementById("set-log").innerHTML += log
+    document.getElementById("match-log").innerHTML += spacer
+}
+
+function addgame2logs() {
+    log = "#" + set + ": " + homePt + " - " + guestPt + "<br>"
+    document.getElementById("match-log").innerHTML += log
+    document.getElementById("set-log").innerHTML += spacer
 }

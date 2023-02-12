@@ -75,7 +75,8 @@ main {
     padding: 0.25rem 0 0 0.5rem;
 }
 
-.team-name {
+.team-name,
+.log-title {
     font-size: 1.5rem;
     margin-bottom: 0.75rem;
 }
@@ -174,12 +175,39 @@ button:active {
 section {
     background-color: #232232;
     border-radius: 1rem;
-    height: auto;
     display: flex;
+    flex-direction: row;
     justify-content: center;
+    flex: 1 1 auto;
+    max-height: 40%;
     align-items: center;
     margin-bottom: 1rem;
     padding: 1rem;
+}
+
+.log-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.log-container:nth-child(1) {
+    margin-right: 0.25rem;
+}
+
+.log-container:nth-child(2) {
+    margin-left: 0.25rem;
+}
+
+.logs {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    text-align: center;
+    overflow: auto;
+    width: 100%;
 }
 
 footer {
