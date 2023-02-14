@@ -54,6 +54,8 @@ function addgame2logs() {
     document.getElementById("match-log").innerHTML += log
     log = "#" + set + ": " + homePt + " - " + guestPt + "<br>"
     document.getElementById("set-log").innerHTML += log
+    log = homeWin + " - " + guestWin + "<br>"
+    document.getElementById("set-point").innerHTML = log 
     set = 1
     homeWin = 0
     guestWin = 0
@@ -73,11 +75,11 @@ function newGame() {
 function checkScore(homePt, guestPt, setTarget, set) {
     if (homePt == setTarget) {
         if (guestPt <= homePt-2) {
-            if (homeWin < setNumber/2) {
+            if (homeWin < setNumber/2 - 1) {
                 console.log("Home team wins set #: " + set)
                 homeWin++
                 newSet()
-            } else if (homeWin > setNumber/2) {
+            } else if (homeWin > setNumber/2 - 1) {
                 console.log("Home team wins the game")
                 newGame()
             }
@@ -87,11 +89,11 @@ function checkScore(homePt, guestPt, setTarget, set) {
         }
     } else if (guestPt == setTarget) {
         if (homePt <= guestPt-2) {
-            if (homeWin < setNumber) {
+            if (guestWin < setNumber - 1) {
                 console.log("Guest team wins set #: " + set)
                 guestWin++
                 newSet()
-            } else if (homeWin > setNumber/2) {
+            } else if (guestWin > setNumber/2 - 1) {
                 console.log("Guest team wins the game")
                 newGame()
             }
