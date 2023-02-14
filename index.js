@@ -3,10 +3,11 @@ let guestPt = 0
 let set = 1
 let log = ""
 let spacer = "<br>"
-let setNumber = 3
+let setNumber = 5
 let setTarget = 25
-let homeWon = 0
-let guestWon = 0
+let lastSetTarget = 21
+let homeWin = 0
+let guestWin = 0
 
 document.getElementById("guest-pt").textContent = guestPt
 
@@ -39,18 +40,23 @@ function addset2logs() {
     log = "#" + set + ": " + homePt + " - " + guestPt + "<br>"
     document.getElementById("set-log").innerHTML += log
     document.getElementById("match-log").innerHTML += spacer
+    log = homeWin + " - " + guestWin + "<br>"
+    document.getElementById("set-point").innerHTML = log 
     set++
 }
 
 function addgame2logs() {
     if (homePt > guestPt) {
-        log = "Home team won!"
+        log = "Home wins!"
     } else {
-        log = "Guest team won!"
+        log = "Guest wins!"
     }
     document.getElementById("match-log").innerHTML += log
-    document.getElementById("set-log").innerHTML += spacer
+    log = "#" + set + ": " + homePt + " - " + guestPt + "<br>"
+    document.getElementById("set-log").innerHTML += log
     set = 1
+    homeWin = 0
+    guestWin = 0
 }
 
 function newSet() {
@@ -67,10 +73,11 @@ function newGame() {
 function checkScore(homePt, guestPt, setTarget, set) {
     if (homePt == setTarget) {
         if (guestPt <= homePt-2) {
-            if (set < setNumber) {
+            if (homeWin < setNumber/2) {
                 console.log("Home team wins set #: " + set)
+                homeWin++
                 newSet()
-            } else if (set == setNumber) {
+            } else if (homeWin > setNumber/2) {
                 console.log("Home team wins the game")
                 newGame()
             }
@@ -80,10 +87,11 @@ function checkScore(homePt, guestPt, setTarget, set) {
         }
     } else if (guestPt == setTarget) {
         if (homePt <= guestPt-2) {
-            if (set < setNumber) {
+            if (homeWin < setNumber) {
                 console.log("Guest team wins set #: " + set)
+                guestWin++
                 newSet()
-            } else if (set == setNumber) {
+            } else if (homeWin > setNumber/2) {
                 console.log("Guest team wins the game")
                 newGame()
             }

@@ -191,14 +191,17 @@ section {
     align-items: center;
     height: 100%;
     width: 100%;
-}
-
-.log-container:nth-child(1) {
-    margin-right: 0.25rem;
+    padding: 0.25rem 0.5rem;
 }
 
 .log-container:nth-child(2) {
-    margin-left: 0.25rem;
+    margin: 0 0.5rem;
+    width: 50%
+}
+
+.log-container:nth-child(2) > div {
+    background-color: #161926;
+    border-radius: 1rem;
 }
 
 .logs {
@@ -209,6 +212,8 @@ section {
     overflow: auto;
     width: 100%;
 }
+
+
 
 footer {
     background-color: #232232;
