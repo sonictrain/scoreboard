@@ -47,9 +47,9 @@ function addset2logs() {
 
 function addgame2logs() {
     if (homePt > guestPt) {
-        log = "Home wins!"
+        log = "Home wins!<br>"
     } else {
-        log = "Guest wins!"
+        log = "Guest wins!<br>"
     }
     document.getElementById("match-log").innerHTML += log
     log = "#" + set + ": " + homePt + " - " + guestPt + "<br>"
